@@ -960,6 +960,14 @@ class Robinhood:
 
         return self.session.get(endpoints.positions(), timeout=15).json()
 
+    def options_positions(self):
+        """Returns the user's options positions
+
+            Returns:
+                (:object: `dict`): JSON dict from getting options positions
+        """
+
+        return self.session.get(endpoints.options_positions(), timeout=15).json()
 
     def securities_owned(self):
         """Returns list of securities' symbols that the user has shares in
