@@ -990,7 +990,7 @@ class Robinhood:
             Returns:
                 (:object: `dict`): JSON dict from getting crypto positions
         """
-        return self.session.get(endpoints.crypto_holdings(), timeout=15).json()
+        return self.session.get(endpoints.crypto_positions(), timeout=15).json()
 
     def securities_owned(self):
         """Returns list of securities' symbols that the user has shares in
