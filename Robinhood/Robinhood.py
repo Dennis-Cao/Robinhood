@@ -705,6 +705,13 @@ class Robinhood:
 
         return res['results'][0]
 
+    def get_crypto_account(self):
+        """Fetch crypto account information
+
+            Returns:
+                (:obj:`dict`): `nummus - accounts` endpoint payload
+        """
+        return self.session.get(endpoints.crypto_accounts(), timeout=15).json()
 
     def get_url(self, url):
         """

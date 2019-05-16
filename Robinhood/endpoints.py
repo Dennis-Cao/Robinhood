@@ -103,3 +103,6 @@ def convert_token():
 
 def crypto_positions():
     return crypto_api_url + "/holdings/"
+
+def crypto_accounts():
+    return crypto_api_url + "/accounts/"
