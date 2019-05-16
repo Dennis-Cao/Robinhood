@@ -106,3 +106,6 @@ def crypto_positions():
 
 def crypto_accounts():
     return crypto_api_url + "/accounts/"
+
+def crypto_orders(orderId=None):
+    return crypto_api_url + "/orders/" + ("{id}/".format(id=orderId) if orderId else "")

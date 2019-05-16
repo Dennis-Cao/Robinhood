@@ -943,6 +943,14 @@ class Robinhood:
 
         return self.session.get(endpoints.orders(orderId), timeout=15).json()
 
+    def crypto_order_history(self, orderId=None):
+        """Returns the user's crypto order history
+            Options Args: add an order ID to retrieve information about a single order.
+            Returns:
+                (:obj:`dict`): JSON dict from getting orders
+        """
+
+        return self.session.get(endpoints.crypto_orders(orderId), timeout=15).json()
 
     def dividends(self):
         """Wrapper for portfolios
