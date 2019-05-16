@@ -1,4 +1,5 @@
 api_url = "https://api.robinhood.com"
+crypto_api_url = "https://nummus.robinhood.com"
 
 def login():
     return api_url + "/oauth2/token/"
@@ -99,3 +100,6 @@ def market_data(optionid):
 
 def convert_token():
     return api_url + "/oauth2/migrate_token/"
+
+def crypto_positions():
+    return crypto_api_url + "/holdings/"
